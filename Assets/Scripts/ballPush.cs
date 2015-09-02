@@ -19,10 +19,10 @@ public class ballPush : MonoBehaviour {
 //			ball.GetComponent<Rigidbody> ().AddForce(0,0,-1500);
 //		}
 		if(collided && Input.GetKey(KeyCode.Space)){
-			Debug.Log ("+power");
+			Debug.Log (power);
 			power += 0.2f;
-			if(power > 80){
-				power = 80f;
+			if(power > 30){
+				power = 30f;
 			}
 		}
 		if(collided && Input.GetKeyUp(KeyCode.Space)){
