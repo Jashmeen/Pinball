@@ -50,6 +50,7 @@ public class pointStuff : MonoBehaviour {
 	public void goToUpPosition(){
 		goingTowards = defaultPos;
 		isMoving = true;
+		isHit = false;
 	}
 
 	public void goToDownPosition(){
