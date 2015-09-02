@@ -5,7 +5,6 @@ public class ballPush : MonoBehaviour {
 
 	bool collided;
 	public GameObject ball;
-	public float multiplier;
 	float power;
 
 	// Use this for initialization
@@ -27,7 +26,7 @@ public class ballPush : MonoBehaviour {
 			}
 		}
 		if(collided && Input.GetKeyUp(KeyCode.Space)){
-			ball.GetComponent<Rigidbody> ().AddForce(0,0,-1*multiplier*power);
+			ball.GetComponent<Rigidbody> ().AddForce(0,0,-10*power);
 			power = 0;
 		}
 

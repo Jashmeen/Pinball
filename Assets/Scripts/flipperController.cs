@@ -11,7 +11,7 @@ public class flipperController : MonoBehaviour {
 	void Start ()
 	{
 		colliding = false;
-		GetComponent<Rigidbody> ().maxAngularVelocity = 80;
+		GetComponent<Rigidbody> ().maxAngularVelocity = 60;
 	}
 	
 	void Update ()
