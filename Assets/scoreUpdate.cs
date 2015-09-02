@@ -26,6 +26,7 @@ public class scoreUpdate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		score.text = "Score: " + overallScore;
-		balls.text = "Balls: " + livesRemaining;
+		if(livesRemaining >=0)
+			balls.text = "Balls: " + livesRemaining;
 	}
 }

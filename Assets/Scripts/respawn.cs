@@ -5,6 +5,7 @@ public class respawn : MonoBehaviour {
 
 	public GameObject ball;
 	public GameObject ballSpawn;
+	public GameObject gameOverText;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,11 @@ public class respawn : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		scoreUpdate.livesRemaining-=1;
 		ball.GetComponent<TrailRenderer>().enabled = false;
-		ball.transform.position = ballSpawn.transform.position;
+		if(scoreUpdate.livesRemaining >= 0){
+			ball.transform.position = ballSpawn.transform.position;
+		}
+		else{
+			gameOverText.SetActive(true);
+		}
 	}
 }
