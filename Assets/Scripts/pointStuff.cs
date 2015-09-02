@@ -32,11 +32,11 @@ public class pointStuff : MonoBehaviour {
 		isHit = true;
 		goToDownPosition();
 		if(otherPointThing1.GetComponent<pointStuff>().isHit && otherPointThing2.GetComponent<pointStuff>().isHit){
-			Debug.Log("add 500");
+			scoreUpdate.overallScore+=500;
 			StartCoroutine(popUp(5));
 		}
 		else{
-			Debug.Log("add 100");
+			scoreUpdate.overallScore+=100;
 		}
 	}
 

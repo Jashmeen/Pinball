@@ -15,18 +15,15 @@ public class ballPush : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (collided && Input.GetKeyDown (KeyCode.Space)) {
-//			ball.GetComponent<Rigidbody> ().AddForce(0,0,-1500);
-//		}
 		if(collided && Input.GetKey(KeyCode.Space)){
-			Debug.Log (power);
-			power += 0.2f;
+			power += 0.5f;
 			if(power > 30){
 				power = 30f;
 			}
 		}
 		if(collided && Input.GetKeyUp(KeyCode.Space)){
 			ball.GetComponent<Rigidbody> ().AddForce(0,0,-10*power);
+			ball.GetComponent<TrailRenderer>().enabled = true;
 			power = 0;
 		}
 

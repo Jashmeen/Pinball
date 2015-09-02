@@ -17,7 +17,8 @@ public class respawn : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log("entered dead zone");
+		scoreUpdate.livesRemaining-=1;
+		ball.GetComponent<TrailRenderer>().enabled = false;
 		ball.transform.position = ballSpawn.transform.position;
 	}
 }
